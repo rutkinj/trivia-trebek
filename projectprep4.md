@@ -4,7 +4,7 @@
 
 201 Study webapp
 
-__As a coding instructor, I want a tool for students to study for the 201 final exam, so that they feel more prepared.__   
+## As a coding instructor, I want a tool for students to study for the 201 final exam, so that they feel more prepared. 
 
 ### Feature Tasks:  
  
@@ -22,17 +22,41 @@ __As a coding instructor, I want a tool for students to study for the 201 final 
 
   c.	Ensure correct answers are counted and displayed
 
-__As a Jeopardy fan, I want an effective and engaging format to study basic web development concepts.__  
+## As a Jeopardy fan, I want an effective and engaging format to study basic web development concepts.
 
 ### Feature Tasks:
 
-  a. Create a familiar visual format, like the Jeopardy question board
-  b. Play Jeopardy thinking music while the user is choosing an answer
-  c. Assign points according to Jeopardy score values
-  d. Fill high-scores with names of famous Champions
+  a. 	Create a familiar visual format, like the Jeopardy question board
+  
+  b. 	Play Jeopardy thinking music while the user is choosing an answer
+  
+  c. 	Assign points according to Jeopardy score values
+  
+  d. 	Fill high-scores with names of famous Champions
+  
 
 ### Acceptance Tests:
 
-  a. Ensure that the user recognizes Jeopardy visual references
-  b. Ensure that music plays at appropriate times
-  c. Ensure that default scores reflect Champions success level
+  a. 	Ensure that the user recognizes Jeopardy visual references
+  
+  b. 	Ensure that music plays at appropriate times
+  
+  c. 	Ensure that default scores reflect Champions success level
+  
+## As a Code Fellows student, I want to play a game of Jeopardy that will help me have a better concept of the topics covered in 201.
+
+### Feature Tasks: 
+
+   a.	Student can learn topics covered in 201 through immersive game similar to Jeopardy
+   
+   b.	User has the ability to have their score kept track of to compare how well they did with other players
+   
+   c. 	User can increase difficulty as their confidence expands
+ 
+### Acceptance Tests:
+
+   a.	Ensure student feels that they have refreshed topics covered in 201
+   
+   b. 	Ensure no bugs or malfunctions occur throughout game
+   
+   c.	Ensure app design is easy for student to understand
