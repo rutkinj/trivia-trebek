@@ -30,3 +30,22 @@ nav{
 #external-links img{
   padding-left: 10px;
 }
+
+footer {
+background-color: bisque;
+height: 50px;
+display: flex;
+/* padding-left: 400px; */
+}
+
+p {
+  margin: auto;
+}
+
+.copy {
+  padding: 0px 0px 0px 500px
+}
+
+.numberAndName {
+  padding: 0px 0px 0px 400px
+}
