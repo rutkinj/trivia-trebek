@@ -1,0 +1,32 @@
+body{
+  max-width: 1200px;
+  margin: auto;
+}
+
+header{
+  margin: 10px;
+  padding: 10px;
+  background-color: bisque;
+}
+
+.header-div{
+  display: flex;
+  justify-content: space-between;
+}
+
+nav{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-end;
+}
+
+#external-links{
+  display: flex;
+  align-items:flex-end;
+  justify-content: space-between;
+}
+
+#external-links img{
+  padding-left: 10px;
+}
