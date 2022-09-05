@@ -11,8 +11,9 @@
 - Score saving page!
 - About us page!
 
-[Software Requirements](softwarerequirements.md)  
-[User Stories](projectprep4.md)
+## [Software Requirements](softwarerequirements.md)
+
+## [User Stories](projectprep4.md)
 
 ## Wireframe
 
