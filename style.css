@@ -49,3 +49,13 @@ p {
 .numberAndName {
   padding: 0px 0px 0px 400px
 }
+
+#questions {
+  display: flex;
+}
+
+#questions>* {
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+}
