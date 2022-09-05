@@ -26,6 +26,14 @@
         width= "300px"/>
 </div>
 
+## Domain Model
+
+<div style = "display: flex">
+  <img src="./img/domain_model_snip.png"
+       alt="domain model for jeopardy game"
+       width="400px"/>
+</div>
+
 ## Contributors
 
 - Ben Lieberman
