@@ -30,3 +30,13 @@ nav{
 #external-links img{
   padding-left: 10px;
 }
+
+#questions {
+  display: flex;
+}
+
+#questions>* {
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+}
