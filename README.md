@@ -11,6 +11,12 @@
 - Score saving page!
 - About us page!
 
+## [Software Requirements](softwarerequirements.md)
+
+## [User Stories](projectprep4.md)
+
+## Wireframe
+
 <div style = "display: flex">
 
   <img  src="./img/index.png"
