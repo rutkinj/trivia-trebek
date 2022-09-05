@@ -60,3 +60,20 @@
    b. 	Ensure no bugs or malfunctions occur throughout game
    
    c.	Ensure app design is easy for student to understand
+   
+
+## As a future student, I want to test my html, css, javascript knowledge . So that I can attend a coding bootcamp.
+
+## Feature Tasks:
+
+ a. User can choose which topic he wants to be tested.
+ b. Save username and score data.
+ c. Track my scores so I compare them later and see my improvements.
+
+
+
+## Acceptance Tests: 
+
+ a. Ensure that all the topics are related to software development.
+ b. Provide the right answers if the user gets a questions wrong.
+ c. Check for the users input when submitting an answer	to accept only strings.
