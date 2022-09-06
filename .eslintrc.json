@@ -12,6 +12,7 @@
     "node": true
   },
   "rules": {
+    "no-undef": "off",
     "no-var": "error",
     "eqeqeq": ["error", "always"],
     "no-console": "off",
