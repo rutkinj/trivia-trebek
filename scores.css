@@ -1,0 +1,54 @@
+body{
+  max-width: 1200px;
+  margin: auto;
+}
+
+header{
+  margin: 10px;
+  padding: 10px;
+  background-color: bisque;
+}
+
+.header-div{
+  display: flex;
+  justify-content: space-between;
+}
+
+nav{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-end;
+}
+
+main{
+  width: 60%;
+  height: 80vh;
+  margin: auto;
+  padding: 10px;
+  background-color: bisque;
+}
+
+h1{
+  text-align: center;
+}
+
+footer {
+  margin: 10px;
+  padding: 10px;
+  background-color: bisque;
+  height: 50px;
+  display: flex;
+}
+
+p {
+  margin: auto;
+}
+
+.copy {
+  padding: 0px 0px 0px 400px
+}
+
+.numberAndName {
+  padding: 0px 0px 0px 300px
+}
