@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:wght@100&display=swap');
+
 body{
   max-width: 1200px;
   margin: auto;
+  background: url("jeopardybackground.png");
 }
 
 header{
   margin: 10px;
   padding: 10px;
-  background-color: bisque;
+  background-color: rgba(217, 217, 217, 0.525);
 }
 
 .header-div{
@@ -32,17 +35,16 @@ nav{
 }
 
 main{
+  border-radius: 10px;
   margin: 10px;
   padding: 10px;
   padding-right: 20px;
   padding-bottom: 20px;
-  background-color: bisque;
+  background-color: black;
 }
 
 footer {
-  margin: 10px;
-  padding: 10px;
-  background-color: bisque;
+  background-color: rgba(189, 189, 189, 0.614);
   height: 50px;
   display: flex;
 }
@@ -52,7 +54,7 @@ p {
 }
 
 .copy {
-  padding: 0px 0px 0px 400px
+  text-align: center;
 }
 
 .numberAndName {
@@ -69,13 +71,61 @@ p {
   width: 15%;
   flex-direction: column;
   font-size: x-large;
+  font-family: 'Anton', sans-serif;
 }
 
 #questions div>*{
   display: block;
   text-align: center;
   padding: 15px;
-  background-color: cadetblue;
+  background-color: rgb(23, 20, 234);
   margin-top: 10px;
   margin-left: 10px;
+  text-shadow: 3px 2px black;
+  transition: all .4s linear
+}
+
+div:hover {
+  color: red;
+}
+
+span {
+  color: white;
+}
+
+div {
+  color: gold;
+}
+
+nav, a {
+  text-shadow: 1px 0px black;
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  color:rgb(23, 20, 234);
+  transition: all .4s linear
+}
+
+a:hover {
+  color: gold;
+}
+
+input {
+  border:1px;
+  font-family: 'Libre Franklin', sans-serif;
+  margin-top: 10px;
+  font-size: 17.5px;
+  color: gold;
+  background-color: rgba(255, 255, 255, 0.825)
+}
+
+input.submitButton {
+  border-radius: 5px;
+  background-color: rgba(45, 45, 253, 0.903);
+  font-family: 'Libre Franklin', sans-serif;
+  transition: all .3s linear
+}
+
+.submitButton:hover {
+  background-color: blue;
 }
