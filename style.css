@@ -64,6 +64,7 @@ p {
   justify-content: center;
 }
 
+/* VVV selects all divs in the Jeopardy grid VVV */
 #questions>* {
   width: 15%;
   flex-direction: column;
