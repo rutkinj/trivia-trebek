@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="style.css">
     <title>201 Trivia</title>
   </head>
+  <script src="questions.js" defer></script>
   <script src="index.js" defer></script>
   <body>
     <header>
@@ -27,14 +28,20 @@
       </form>
     </header>
     <main>
-      <div id="">
       <section id="questions">
         <div id="javascript"><span>JavaScript</span></div>
         <div id="html"><span>HTML</span></div>
         <div id="css"><span>CSS</span></div>
         <div id="git"><span>git</span></div>
       </section>
-      </div>
+      <hr style="margin: 20px;">
+      <section id="q-display">
+        <p>Doot doot, question goes here</p>
+        <form id="input">
+          <input type="text" name="answer-input" placeholder="Answer Here"/>
+          <input type="submit"/>
+        </form>
+      </section>
     </main>
     <footer>
       <p class="copy">All rights reserved</p>

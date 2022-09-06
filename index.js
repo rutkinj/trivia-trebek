@@ -1,23 +1,24 @@
 'use strict';
 
-const Game = function (player) {
-  this.player = player;
-  this.questions = [];
-};
+let questions;
+let ans;
 
-Game.prototype.randomQuestion = function () {
-  const idx = Math.floor(Math.random() * this.questions.length);
-  return this.questions[idx];
-};
+function randomQuestion(category) {
+  const idx = Math.floor(Math.random() * 5);
+  return questions.filter((itm) => itm.category.toLowerCase() === category)[
+    idx
+  ];
+}
 
 const User = function (name, hiScore = 0) {
   this.userName = name;
   this.hiScore = hiScore;
 };
 
-const Question = function (q, a) {
+const Question = function (category, q, a) {
   this.question = q;
   this.answer = a;
+  this.category = category;
 };
 
 function populateBoard() {
@@ -25,33 +26,46 @@ function populateBoard() {
   for (const topic of topics) {
     for (let i = 2; i <= 10; i += 2) {
       let el = document.createElement('div');
+      el.id = `${topic.id}-${i * 100}`;
       el.innerText = `${i * 100}`;
+      el.addEventListener('click', onClick);
       topic.appendChild(el);
     }
   }
 }
 
-function testLocalStorage() {
-  const users = [
-    new User('ben', 200),
-    new User('joe', 400),
-    new User('marc', 450),
-    new User('megan', 300),
-    new User('diego', 500),
-  ];
-  localStorage.setItem('users', JSON.stringify(users));
+function onClick(event) {
+  event.preventDefault();
+  let category = event.target.id.split('-')[0];
+  const displayBox = document.querySelector('#q-display>p');
+  const { question, answer } = randomQuestion(category);
+  displayBox.innerText = question;
+  ans = answer;
+  this.removeEventListener('click', onClick);
+}
+
+function checkAnswer(event) {
+  event.preventDefault();
+  let answer = new FormData(this).get('answer-input');
+  answer === ans ? console.log(true) : console.log(false);
 }
 
 function startGame() {
-  const game = new Game(new User('ben'));
-  for (let i = 0; i < 20; i++) {
-    let question = new Question(
-      'what is the air speed velocity of an unladen swallow?',
-      'African or European?'
-    );
-    game.questions.push(question);
+  const user = registerUser();
+  localStorage.setItem('users', JSON.stringify(user));
+  questions = createQuestions();
+  document.getElementById('input').addEventListener('submit', checkAnswer);
+}
+
+function createQuestions() {
+  const quests = [];
+  for (const value of Object.values(QUESTIONS)) {
+    for (let { category, question, answer } of value) {
+      let quest = new Question(category, question, answer);
+      quests.push(quest);
+    }
   }
-  return game;
+  return quests;
 }
 
 function registerUser() {
@@ -61,8 +75,14 @@ function registerUser() {
     let name = new FormData(user).get('user-name');
     // check localStorage to see if User is already registered
     if (alreadyRegistered(name)) {
-      console.log('Welcome back!');
+      const users = JSON.parse(localStorage.users);
+      for (const user of users) {
+        if (user.name === name) {
+          return new User(name, user.hiScore);
+        }
+      }
     }
+    return new User(name, 0);
   });
 }
 
@@ -72,12 +92,11 @@ function alreadyRegistered(user) {
       return obj.userName;
     })
     .includes(user)
-    ? true // new User(user)
+    ? true
     : false;
   return exists;
 }
 
 startGame();
-testLocalStorage();
-registerUser();
+createQuestions();
 populateBoard();
