@@ -15,6 +15,17 @@ const Question = function (q, a) {
   this.answer = a;
 };
 
+function populateBoard() {
+  const topics = document.getElementById('questions').children;
+  for (const topic of topics) {
+    for (let i = 2; i <= 10; i+= 2) {
+      let el = document.createElement('div');
+      el.innerText = `${i * 100}`;
+      topic.appendChild(el);
+    }
+  }
+}
+
 function startGame() {
   const game = new Game(new User('ben'));
   for (let i = 0; i < 20; i++) {
@@ -47,3 +58,4 @@ function alreadyRegistered(user) {
 
 startGame();
 registerUser();
+populateBoard();
