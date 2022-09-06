@@ -1,12 +1,13 @@
 'use strict';
 
 let questions;
+let ans;
 
 function randomQuestion(category) {
   const idx = Math.floor(Math.random() * 5);
-  return questions.filter(
-    (itm) => itm.category.toLowerCase() === category
-  )[idx];
+  return questions.filter((itm) => itm.category.toLowerCase() === category)[
+    idx
+  ];
 }
 
 const User = function (name, hiScore = 0) {
@@ -36,14 +37,24 @@ function populateBoard() {
 function onClick(event) {
   event.preventDefault();
   let category = event.target.id.split('-')[0];
-  console.log(randomQuestion(category));
+  const displayBox = document.querySelector('#q-display>p');
+  const { question, answer } = randomQuestion(category);
+  displayBox.innerText = question;
+  ans = answer;
+  this.removeEventListener('click', onClick);
 }
 
+function checkAnswer(event) {
+  event.preventDefault();
+  let answer = new FormData(this).get('answer-input');
+  answer === ans ? console.log(true) : console.log(false);
+}
 
 function startGame() {
   const user = registerUser();
   localStorage.setItem('users', JSON.stringify(user));
   questions = createQuestions();
+  document.getElementById('input').addEventListener('submit', checkAnswer);
 }
 
 function createQuestions() {
@@ -81,7 +92,7 @@ function alreadyRegistered(user) {
       return obj.userName;
     })
     .includes(user)
-    ? true // new User(user)
+    ? true
     : false;
   return exists;
 }
