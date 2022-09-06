@@ -37,7 +37,7 @@ body{
     background-color: 
   }
 
-  section.headBox {
+  div.headBox {
     border-radius: 10px;
     background-color: rgb(218, 236, 252);
     height: 150px;
@@ -49,19 +49,7 @@ body{
     margin: 0px 0px 0px 400px;
   }
 
-  section.topBox {
-    border-radius: 10px;
-    background-color: rgb(218, 236, 252);
-    height: 300px;
-    width: 700px;
-    font-size: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    margin: 25px 0px 0px 250px
-  }
-
-  section.middleBox {
+  section {
     border-radius: 10px;
     background-color: rgb(218, 236, 252);
     height: 300px;
@@ -69,49 +57,74 @@ body{
     font-size: 20px;
     text-align: left;
     display: flex;
-    justify-content: space-between;
     margin: 25px 0px 0px 250px
   }
 
-  section.bottomBox {
-    border-radius: 10px;
-    background-color: rgb(218, 236, 252);
-    height: 300px;
-    width: 700px;
-    font-size: 20px;
-    text-align: center;
-    display: flex;
+  section.meganBox {
     justify-content: space-between;
-    margin: 25px 0px 0px 250px
   }
 
-  footer {
-  background-color: bisque;
-  height: 50px;
-  display: flex;
+  section.diegoBox {
+    justify-content: space-between;
   }
   
   p {
     margin: auto;
+    text-align: justify;
   }
-  
+
+  p.aboutJoe {
+    width: 415px;
+    margin: 10px 0px 0px 10px;
+  }
+
+  p.aboutMegan {
+    margin: 10px 0px 0px 10px;
+    width: 465px; 
+  }
+
+  p.aboutBen {
+    width: 430px;
+  }
+
+  p.aboutMarc {
+    margin-right: 10px;
+  }
+
+  p.aboutDiego {
+    margin-right: 15px;
+  }
+
   .copy {
-    padding: 0px 0px 0px 500px
+    padding: 0px 0px 0px 500px;
   }
   
   .numberAndName {
-    padding: 0px 0px 0px 400px
+    padding: 0px 0px 0px 400px;
   }
 
   img {
-    border-radius: 5px;
+    border-radius: 10px;
     border: 5px solid rgb(0, 0, 0);
   }
 
-  .meganImg {
-    margin: 20px 20px 0px 0px
+  img.joeImg {
+    margin: 50px 20px 0px 20px;
   }
 
-  .aboutMegan {
-    margin: 5px 0px 0px 5px;
+  img.meganImg {
+    margin: 38px 20px 0px 0px;
   }
+
+ img.marcImg {
+  margin: 50px 20px 0px 20px;
+ }
+
+ img.diegoImg {
+  margin: 50px 20px 0px 20px;
+ }
+
+ img.benImg {
+  margin: 38px 50px 0px 0px;
+ }
+  
