@@ -3,11 +3,39 @@
   <head>
     <title>High Scores</title>
     <script src="scores.js" defer></script>
+    <link rel="stylesheet" href="scores.css">
   </head>
   <body>
-    <div>
-      <ol id="scores-list">
-      </ol>
-    </div>
+    <header>
+      <div class="header-div">
+        <img src="https://placehold.jp/300x75.png" alt="logo image">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="aboutUs.html">About Us</a>
+          <a href="./scores.html">High Scores</a>
+        </nav>
+        <div id="external-links">
+          <img src="https://placehold.jp/45x45.png" alt="link placeholder">
+          <img src="https://placehold.jp/45x45.png" alt="link placeholder">
+          <img src="https://placehold.jp/45x45.png" alt="link placeholder">
+        </div>
+      </div>
+      <div class="header-div"></div>
+      <form id="user">
+        <input type="text" id="user-name" placeholder="user name" />
+        <input type="submit" />
+      </form>
+    </header>
+    <main>
+      <h1>HIGH SCORES</h1>
+      <div>
+        <ol id="scores-list">
+        </ol>
+      </div>
+    </main>
+    <footer>
+      <p class="copy">All rights reserved</p>
+      <p class="numberAndName">(555)555-5555 <br> Trivia Trebek</p>
+    </footer>
   </body>
 </html>
