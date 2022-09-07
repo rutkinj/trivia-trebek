@@ -3,11 +3,17 @@
 let questions;
 let ans;
 
-function randomQuestion(category) {
-  const idx = Math.floor(Math.random() * 5);
-  return questions.filter((itm) => itm.category.toLowerCase() === category)[
-    idx
-  ];
+// function randomQuestion(category) {
+//   const idx = Math.floor(Math.random() * 5);
+//   return questions.filter((itm) => itm.category.toLowerCase() === category)[
+//     idx
+//   ];
+// }
+
+function getQuestion(category, value){
+  return questions.filter(
+    (itm) => itm.category.toLowerCase() === category &&
+    parseInt(itm.value) === parseInt(value))[0];
 }
 
 const User = function (name, hiScore = 0) {
@@ -15,10 +21,11 @@ const User = function (name, hiScore = 0) {
   this.hiScore = hiScore;
 };
 
-const Question = function (category, q, a) {
+const Question = function (category, q, a, v) {
   this.question = q;
   this.answer = a;
   this.category = category;
+  this.value = v;
 };
 
 function populateBoard() {
@@ -37,8 +44,9 @@ function populateBoard() {
 function onClick(event) {
   event.preventDefault();
   let category = event.target.id.split('-')[0];
+  let value = event.target.innerText;
   const displayBox = document.querySelector('#q-display>p');
-  const { question, answer } = randomQuestion(category);
+  const { question, answer } = getQuestion(category, value);
   displayBox.innerText = question;
   ans = answer;
   this.removeEventListener('click', onClick);
@@ -59,9 +67,9 @@ function startGame() {
 
 function createQuestions() {
   const quests = [];
-  for (const value of Object.values(QUESTIONS)) {
-    for (let { category, question, answer } of value) {
-      let quest = new Question(category, question, answer);
+  for (const qObj of Object.values(QUESTIONS)) {
+    for (let { category, question, answer, value } of qObj) {
+      let quest = new Question(category, question, answer, value);
       quests.push(quest);
     }
   }
@@ -99,4 +107,5 @@ function alreadyRegistered(user) {
 
 startGame();
 createQuestions();
+console.log(questions);
 populateBoard();
