@@ -55,11 +55,11 @@
  
 ### Acceptance Tests:
 
-   a.	Ensure student feels that they have refreshed topics covered in 201
+ a.	Ensure student feels that they have refreshed topics covered in 201
    
-   b. 	Ensure no bugs or malfunctions occur throughout game
+ b. 	Ensure no bugs or malfunctions occur throughout game
    
-   c.	Ensure app design is easy for student to understand
+ c.	Ensure app design is easy for student to understand
    
 
 ## As a future student, I want to test my html, css, javascript knowledge . So that I can attend a coding bootcamp.
@@ -67,13 +67,33 @@
 ## Feature Tasks:
 
  a. User can choose which topic he wants to be tested.
+
  b. Save username and score data.
+
  c. Track my scores so I compare them later and see my improvements.
+
 
 
 
 ## Acceptance Tests: 
 
  a. Ensure that all the topics are related to software development.
+
  b. Provide the right answers if the user gets a questions wrong.
+
  c. Check for the users input when submitting an answer	to accept only strings.
+
+## As a general purpose user, I want this application to provide me with an easy-to-use gameplay experience that teaches me fundamentals of JavaScript, HTML, and CSS.
+
+## Feature Tasks:
+
+The game will track users who register using a form. Their username will be saved alongside any previous game store. The game board will consist of 20 questions displayed as tiles grouped into four categories:
+* HTML
+* CSS
+* JavaScript
+* git (version control)
+Answers will be provided once a question is answered. Possible question/answer formats include text, multiple choice, and true/false. A high score ranking list will give users a sense of where their knowledge stands compared to others.
+
+## Acceptance Tests:
+
+Given a user with no programming experience, the game will provide them with an introduction to key concepts of web development using the above-mentioned technologies. If the user can play the game without too much trouble (looking up information is acceptable) and without bugs, then the game will be considered successful.
