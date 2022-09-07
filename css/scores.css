@@ -60,7 +60,6 @@ footer {
   display: flex;
 }
 
-
 .copy {
   padding: 0px 0px 0px 400px;
 }
@@ -108,4 +107,16 @@ input {
   font-size: 20px;
   color: black;
   background-color: rgba(255, 255, 255, 0.825);
+}
+
+#external-links {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+#external-links img {
+  padding-left: 10px;
+  height: 50px;
+  margin-left: 150%;
 }
