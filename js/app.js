@@ -48,6 +48,10 @@ function onClick(event) {
   this.removeEventListener('click', onClick);
   this.style.backgroundColor = 'gray';
   this.style.pointerEvents = 'none';
+  this.style.transition = 'transform 0.8s';
+  this.style.transform = 'rotate(360deg)';
+  this.style.color = 'red';
+  this.style.perspective = '1000px';
 }
 
 function checkAnswer(event) {
