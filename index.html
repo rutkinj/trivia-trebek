@@ -21,11 +21,15 @@
           <img src="https://placehold.jp/45x45.png" alt="link placeholder" />
         </div>
       </div>
-      <div class="header-div"></div>
-      <form id="user">
-        <input type="text" name="user-name" value="" placeholder="user name" />
-        <input class="submitButton" type="submit" value="Let's Play!" />
-      </form>
+      <div class="header-div">
+        <form id="user">
+          <input type="text" name="user-name" value="" placeholder="user name" />
+          <input class="submitButton" type="submit" value="Let's Play!" />
+        </form>
+        <div>
+        <p>Score: <span id="score-display">000</span></p>
+        </div>
+      </div>
     </header>
     <main>
       <section id="questions">
@@ -36,10 +40,10 @@
       </section>
       <hr style="margin: 20px" />
       <section id="q-display">
-        <p></p>
+        <p>Pick a question</p>
         <form id="input">
           <input type="text" name="answer-input" placeholder="Answer Here" />
-          <input type="submit" />
+          <input type="submit" id="ans-submit" disabled/>
         </form>
       </section>
     </main>
