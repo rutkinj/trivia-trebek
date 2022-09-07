@@ -19,15 +19,15 @@
 
 <div style = "display: flex">
 
-  <img  src="./img/index.png"
+  <img  src="./wireframe/index.png"
         alt="homepage wireframe"
         width= "300px"/>
 
-  <img  src="./img/about-us.png"
+  <img  src="./wireframe/about-us.png"
         alt="homepage wireframe"
         width= "300px"/>
 
-  <img  src="./img/hi-score.png"
+  <img  src="./wireframe/hi-score.png"
         alt="homepage wireframe"
         width= "300px"/>
 </div>
@@ -35,7 +35,7 @@
 ## Domain Model
 
 <div style = "display: flex">
-  <img src="./img/domain_model_snip.png"
+  <img src="./wireframe/domain_model_snip.png"
        alt="domain model for jeopardy game"
        width="400px"/>
 </div>
