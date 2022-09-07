@@ -1,130 +1,131 @@
-body{
-    max-width: 1200px;
-    margin: auto;
-    background-color: rgb(81, 175, 252);
-  }
-  
-  header{
-    margin: 10px;
-    padding: 10px;
-    background-color: bisque;
-  }
-  
-  .header-div{
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  nav{
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items:flex-end;
-  }
-  
-  #external-links{
-    display: flex;
-    align-items:flex-end;
-    justify-content: space-between;
-  }
-  
-  #external-links img{
-    padding-left: 10px;
-  }
-  
-  main {
-    height: 500px;
-    background-color: 
-  }
+body {
+  max-width: 1200px;
+  margin: auto;
+  background-color: rgb(81, 175, 252);
+}
 
-  div.headBox {
-    border-radius: 10px;
-    background-color: rgb(218, 236, 252);
-    height: 150px;
-    width: 400px;
-    font-size: 50px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 0px 0px 400px;
-  }
+header {
+  margin: 10px;
+  padding: 10px;
+  background-color: bisque;
+}
 
-  section {
-    border-radius: 10px;
-    background-color: rgb(218, 236, 252);
-    height: 300px;
-    width: 700px;
-    font-size: 20px;
-    text-align: left;
-    display: flex;
-    margin: 25px 0px 0px 250px
-  }
+.header-div {
+  display: flex;
+  justify-content: space-between;
+}
 
-  section.meganBox {
-    justify-content: space-between;
-  }
+nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
-  section.diegoBox {
-    justify-content: space-between;
-  }
-  
-  p {
-    margin: auto;
-    text-align: justify;
-  }
+main {
+  height: 500px;
+  background-color: ;
+}
 
-  p.aboutJoe {
-    width: 415px;
-    margin: 10px 0px 0px 10px;
-  }
+div.headBox {
+  border-radius: 10px;
+  background-color: rgb(218, 236, 252);
+  height: 150px;
+  width: 400px;
+  font-size: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 0px 400px;
+}
 
-  p.aboutMegan {
-    margin: 10px 0px 0px 10px;
-    width: 465px; 
-  }
+section {
+  border-radius: 10px;
+  background-color: rgb(218, 236, 252);
+  height: 300px;
+  width: 700px;
+  font-size: 20px;
+  text-align: left;
+  display: flex;
+  margin: 25px 0px 0px 250px;
+}
 
-  p.aboutBen {
-    width: 430px;
-  }
+section.meganBox {
+  justify-content: space-between;
+}
 
-  p.aboutMarc {
-    margin-right: 10px;
-  }
+section.diegoBox {
+  justify-content: space-between;
+}
 
-  p.aboutDiego {
-    margin-right: 15px;
-  }
+p {
+  margin: auto;
+  text-align: justify;
+}
 
-  .copy {
-    padding: 0px 0px 0px 500px;
-  }
-  
-  .numberAndName {
-    padding: 0px 0px 0px 400px;
-  }
+p.aboutJoe {
+  width: 415px;
+  margin: 10px 0px 0px 10px;
+}
 
-  img {
-    border-radius: 10px;
-    border: 5px solid rgb(0, 0, 0);
-  }
+p.aboutMegan {
+  margin: 10px 0px 0px 10px;
+  width: 465px;
+}
 
-  img.joeImg {
-    margin: 50px 20px 0px 20px;
-  }
+p.aboutBen {
+  width: 430px;
+}
 
-  img.meganImg {
-    margin: 38px 20px 0px 0px;
-  }
+p.aboutMarc {
+  margin-right: 10px;
+}
 
- img.marcImg {
+p.aboutDiego {
+  margin-right: 15px;
+}
+
+.copy {
+  padding: 0px 0px 0px 500px;
+}
+
+.numberAndName {
+  padding: 0px 0px 0px 400px;
+}
+
+img {
+  border-radius: 10px;
+  border: 5px solid rgb(0, 0, 0);
+}
+
+img.joeImg {
   margin: 50px 20px 0px 20px;
- }
+}
 
- img.diegoImg {
+img.meganImg {
+  margin: 38px 20px 0px 0px;
+}
+
+img.marcImg {
   margin: 50px 20px 0px 20px;
- }
+}
 
- img.benImg {
+img.diegoImg {
+  margin: 50px 20px 0px 20px;
+}
+
+img.benImg {
   margin: 38px 50px 0px 0px;
- }
-  
+}
+
+#external-links {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+#external-links img {
+  padding-left: 10px;
+  height: 50px;
+  margin-left: 150%;
+}
