@@ -79,7 +79,6 @@ function wrongAns(){
 }
 
 function startGame() {
-  localStorage.setItem('users', JSON.stringify([]));
   questions = createQuestions();
   registerUser();
   document.getElementById('input').addEventListener('submit', checkAnswer);
@@ -102,7 +101,7 @@ function registerUser() {
   return user.addEventListener('submit', function (event) {
     event.preventDefault();
     let name = new FormData(user).get('user-name');
-    console.log(alreadyRegistered(name));
+    return alreadyRegistered(name);
   });
 }
 
