@@ -1,40 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:wght@100&display=swap');
 
-body{
+body {
   max-width: 1200px;
   margin: auto;
-  background: url("/img/jeopardybackground.png");
+  background: url('/img/jeopardybackground.png');
 }
 
-header{
+header {
   margin: 10px;
   padding: 10px;
   background-color: rgba(217, 217, 217, 0.525);
 }
 
-.header-div{
+.header-div {
   display: flex;
   justify-content: space-between;
 }
 
-nav{
+nav {
   width: 40%;
   display: flex;
   justify-content: space-between;
-  align-items:flex-end;
+  align-items: flex-end;
 }
 
-#external-links{
+#external-links {
   display: flex;
-  align-items:flex-end;
+  align-items: flex-end;
   justify-content: space-between;
 }
 
-#external-links img{
+#external-links img {
   padding-left: 10px;
 }
 
-main{
+main {
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
@@ -58,7 +58,7 @@ p {
 }
 
 .numberAndName {
-  padding: 0px 0px 0px 300px
+  padding: 0px 0px 0px 300px;
 }
 
 #questions {
@@ -66,7 +66,7 @@ p {
   justify-content: center;
 }
 
-#questions>* {
+#questions > * {
   width: 15%;
   flex-direction: column;
   font-size: x-large;
@@ -74,7 +74,7 @@ p {
 }
 
 /* VVV selects all divs in the Jeopardy grid VVV */
-#questions div>*{
+#questions div > * {
   display: block;
   text-align: center;
   padding: 15px;
@@ -82,7 +82,20 @@ p {
   margin-top: 10px;
   margin-left: 10px;
   text-shadow: 3px 2px black;
-  transition: all .4s linear
+  transition: all 0.4s linear;
+}
+
+#javascript div {
+  cursor: pointer;
+}
+#html div {
+  cursor: pointer;
+}
+#css div {
+  cursor: pointer;
+}
+#git div {
+  cursor: pointer;
 }
 
 div:hover {
@@ -94,36 +107,38 @@ span {
 }
 
 div {
-  color: gold;
+  color: #c5974d;
 }
 
-nav, a {
-  text-shadow: 1px 0px black;
+nav,
+a {
+  text-shadow: 1px 1px black;
   font-family: 'Anton', sans-serif;
   font-size: 30px;
   text-decoration: none;
-  color:rgb(23, 20, 234);
-  transition: all .4s linear
+  color: rgb(23, 20, 234);
+  transition: all 0.4s linear;
 }
 
 a:hover {
-  color: gold;
+  color: #c5974d;
 }
 
 input {
-  border:1px;
-  font-family: 'Libre Franklin', sans-serif;
+  border: 1px;
+  font-family: sans-serif;
   margin-top: 10px;
-  font-size: 17.5px;
-  color: gold;
-  background-color: rgba(255, 255, 255, 0.825)
+  font-size: 20px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.825);
 }
 
 input.submitButton {
+  color: #c5974d;
   border-radius: 5px;
   background-color: rgba(45, 45, 253, 0.903);
   font-family: 'Libre Franklin', sans-serif;
-  transition: all .3s linear
+  transition: all 0.3s linear;
 }
 
 .submitButton:hover {
@@ -131,21 +146,24 @@ input.submitButton {
 }
 
 #q-display {
+  border: dashed;
+  border-radius: 5px;
   width: 40%;
   margin: auto;
   margin-top: 10px;
   padding: 15px;
-  background-color: lightblue;
+  background-color: blue;
+  color: white;
   display: flex;
   flex-direction: column;
 }
 
-#input{
+#input {
   margin-top: 10px;
   display: flex;
   justify-content: center;
 }
 
-#input>input:first-child{
+#input > input:first-child {
   margin-right: 10px;
 }
