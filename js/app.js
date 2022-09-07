@@ -100,7 +100,6 @@ function updateHiScore(){
 }
 
 function startGame() {
-  localStorage.setItem('users', JSON.stringify([]));
   questions = createQuestions();
   registerUser();
   document.getElementById('input').addEventListener('submit', checkAnswer);
@@ -127,6 +126,7 @@ function registerUser() {
     console.log(currentUser);
 
     console.log(alreadyRegistered(name));
+
   });
 }
 
