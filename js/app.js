@@ -3,6 +3,7 @@
 let questions;
 let ans;
 let val;
+let currentUser = '';
 let currentScore = 0;
 
 function getQuestion(category, value) {
@@ -52,23 +53,27 @@ function onClick(event) {
   this.removeEventListener('click', onClick);
   this.style.backgroundColor = 'gray';
   this.style.pointerEvents = 'none';
+  this.style.transition = 'transform 0.8s';
+  this.style.transform = 'rotate(360deg)';
+  this.style.color = 'red';
+  this.style.perspective = '1000px';
 }
 
 function checkAnswer(event) {
   event.preventDefault();
   let answer = new FormData(this).get('answer-input');
   document.getElementById('ans-submit').disabled = true;
-  answer === ans ? correctAns() : console.log(false);
+  answer === ans ? correctAns() : wrongAns();
 }
 
 function correctAns(){
   const displayBox = document.querySelector('#q-display>p');
   displayBox.innerHTML = 'That is correct!';
   let disp = document.getElementById('score-display');
-  console.log(currentScore);
   currentScore += parseInt(val);
   disp.innerHTML = currentScore;
   //check hiscore and update
+  updateHiScore();
   //let pick new q
 }
 
@@ -76,6 +81,22 @@ function wrongAns(){
   const displayBox = document.querySelector('#q-display>p');
   displayBox.innerHTML = 'Nope, incorrect.';
   //let pick new q
+}
+
+function updateHiScore(){
+  if (currentUser){
+    let userList = JSON.parse(localStorage.getItem('users'));
+    let userObj = userList.find((itm) => itm.userName === currentUser);
+    let index = userList.indexOf(userObj);
+
+    if (currentScore > userObj.hiScore){
+      userObj.hiScore = currentScore;
+      userList[index] = userObj;
+      localStorage.setItem('users', JSON.stringify(userList));
+    } else {
+      console.log('user needs to register');
+    }
+  }
 }
 
 function startGame() {
@@ -101,7 +122,11 @@ function registerUser() {
   return user.addEventListener('submit', function (event) {
     event.preventDefault();
     let name = new FormData(user).get('user-name');
-    return alreadyRegistered(name);
+    currentUser = name;
+    console.log(currentUser);
+
+    console.log(alreadyRegistered(name));
+
   });
 }
 
