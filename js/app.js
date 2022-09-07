@@ -3,17 +3,12 @@
 let questions;
 let ans;
 
-// function randomQuestion(category) {
-//   const idx = Math.floor(Math.random() * 5);
-//   return questions.filter((itm) => itm.category.toLowerCase() === category)[
-//     idx
-//   ];
-// }
-
-function getQuestion(category, value){
+function getQuestion(category, value) {
   return questions.filter(
-    (itm) => itm.category.toLowerCase() === category &&
-    parseInt(itm.value) === parseInt(value))[0];
+    (itm) =>
+      itm.category.toLowerCase() === category &&
+      parseInt(itm.value) === parseInt(value)
+  )[0];
 }
 
 const User = function (name, hiScore = 0) {
@@ -59,9 +54,8 @@ function checkAnswer(event) {
 }
 
 function startGame() {
-  const user = registerUser();
-  localStorage.setItem('users', JSON.stringify(user));
-  questions = createQuestions();
+  localStorage.setItem('users', JSON.stringify([]));
+  registerUser();
   document.getElementById('input').addEventListener('submit', checkAnswer);
 }
 
@@ -78,34 +72,26 @@ function createQuestions() {
 
 function registerUser() {
   const user = document.getElementById('user');
-  user.addEventListener('submit', function (event) {
+  return user.addEventListener('submit', function (event) {
     event.preventDefault();
     let name = new FormData(user).get('user-name');
-    // check localStorage to see if User is already registered
-    if (alreadyRegistered(name)) {
-      const users = JSON.parse(localStorage.users);
-      for (const user of users) {
-        if (user.name === name) {
-          return new User(name, user.hiScore);
-        }
-      }
-    }
-    return new User(name, 0);
+    console.log(alreadyRegistered(name));
   });
 }
 
-function alreadyRegistered(user) {
-  const exists = JSON.parse(localStorage.getItem('users'))
-    .map((obj) => {
-      return obj.userName;
-    })
-    .includes(user)
-    ? true
-    : false;
-  return exists;
+function alreadyRegistered(name) {
+  const exists = JSON.parse(localStorage.getItem('users'));
+  const existingUser = exists.find((itm) => itm.userName === name);
+  if (existingUser) {
+    return existingUser;
+  } else {
+    const user = new User(name, 0);
+    exists.push(user);
+    localStorage.setItem('users', JSON.stringify(exists));
+    return user;
+  }
 }
 
 startGame();
 createQuestions();
-console.log(questions);
 populateBoard();
