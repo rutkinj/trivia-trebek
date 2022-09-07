@@ -2,6 +2,8 @@
 
 let questions;
 let ans;
+let val;
+let currentScore = 0;
 
 // function randomQuestion(category) {
 //   const idx = Math.floor(Math.random() * 5);
@@ -48,14 +50,34 @@ function onClick(event) {
   const displayBox = document.querySelector('#q-display>p');
   const { question, answer } = getQuestion(category, value);
   displayBox.innerText = question;
+  val = value;
   ans = answer;
+  document.getElementById('ans-submit').disabled = false;
   this.removeEventListener('click', onClick);
 }
 
 function checkAnswer(event) {
   event.preventDefault();
   let answer = new FormData(this).get('answer-input');
-  answer === ans ? console.log(true) : console.log(false);
+  document.getElementById('ans-submit').disabled = true;
+  answer === ans ? correctAns() : console.log(false);
+}
+
+function correctAns(){
+  const displayBox = document.querySelector('#q-display>p');
+  displayBox.innerHTML = 'That is correct!';
+  let disp = document.getElementById('score-display');
+  console.log(currentScore);
+  currentScore += parseInt(val);
+  disp.innerHTML = currentScore;
+  //check hiscore and update
+  //let pick new q
+}
+
+function wrongAns(){
+  const displayBox = document.querySelector('#q-display>p');
+  displayBox.innerHTML = 'Nope, incorrect.';
+  //let pick new q
 }
 
 function startGame() {
@@ -63,6 +85,7 @@ function startGame() {
   localStorage.setItem('users', JSON.stringify(user));
   questions = createQuestions();
   document.getElementById('input').addEventListener('submit', checkAnswer);
+  document.getElementById('ans-submit').disabled = true;
 }
 
 function createQuestions() {
