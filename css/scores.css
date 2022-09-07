@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:wght@100&display=swap');
+
 body{
   max-width: 1200px;
   margin: auto;
+  background: url("/img/jeopardybackground.png");
 }
 
 header{
   margin: 10px;
   padding: 10px;
-  background-color: bisque;
+  background-color: rgba(217, 217, 217, 0.525);
 }
 
 .header-div{
@@ -22,21 +25,37 @@ nav{
 }
 
 main{
-  width: 60%;
+  border-radius: 10px;
+  /* width: 60%; */
   height: 80vh;
-  margin: auto;
+  margin: 10px;
   padding: 10px;
-  background-color: bisque;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background-color: black;
 }
 
 h1{
   text-align: center;
+  color: gold;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 4px;
+  font-size: 60px;
+}
+
+main li {
+  list-style-type: none;
+  text-align: center;
+  color: rgb(251, 252, 252);
+  font-family: 'anton', sans-serif;
+  letter-spacing: 3px;
+  font-size: 30px;
 }
 
 footer {
   margin: 10px;
   padding: 10px;
-  background-color: bisque;
+  background-color: rgba(189, 189, 189, 0.614);
   height: 50px;
   display: flex;
 }
@@ -51,4 +70,17 @@ p {
 
 .numberAndName {
   padding: 0px 0px 0px 300px
+}
+
+nav, a {
+  text-shadow: 1px 0px black;
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  color:rgb(23, 20, 234);
+  transition: all .4s linear;
+}
+
+a:hover {
+  color: gold;
 }
