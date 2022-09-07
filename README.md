@@ -11,25 +11,26 @@
 - Score saving page!
 - About us page!
 
-## [Software Requirements](softwarerequirements.md)
+## [Software Requirements](./mdFiles/softwarerequirements.mdsoftwarerequirements.md)
 
-## [User Stories](projectprep4.md)
+## [User Stories](./mdFiles/userStories.md)
 
 ## Wireframe
 
 <div style = "display: flex">
 
-  <img  src="./wireframe/index.png"
+<img  src="./wireframe/index.png"
         alt="homepage wireframe"
         width= "300px"/>
 
-  <img  src="./wireframe/about-us.png"
+<img  src="./wireframe/about-us.png"
         alt="homepage wireframe"
         width= "300px"/>
 
-  <img  src="./wireframe/hi-score.png"
+<img  src="./wireframe/hi-score.png"
         alt="homepage wireframe"
         width= "300px"/>
+
 </div>
 
 ## Domain Model
