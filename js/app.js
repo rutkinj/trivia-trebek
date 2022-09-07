@@ -55,6 +55,7 @@ function checkAnswer(event) {
 
 function startGame() {
   localStorage.setItem('users', JSON.stringify([]));
+  questions = createQuestions();
   registerUser();
   document.getElementById('input').addEventListener('submit', checkAnswer);
 }
@@ -93,5 +94,4 @@ function alreadyRegistered(name) {
 }
 
 startGame();
-createQuestions();
 populateBoard();
