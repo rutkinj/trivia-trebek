@@ -112,18 +112,19 @@ a:hover {
 
 input {
   border:1px;
-  font-family: 'Libre Franklin', sans-serif;
+  font-family:sans-serif;
   margin-top: 10px;
-  font-size: 17.5px;
-  color: gold;
+  font-size: 20px;
+  color: black;
   background-color: rgba(255, 255, 255, 0.825)
 }
 
 input.submitButton {
+  color: gold;
   border-radius: 5px;
   background-color: rgba(45, 45, 253, 0.903);
   font-family: 'Libre Franklin', sans-serif;
-  transition: all .3s linear
+  transition: all .3s linear;
 }
 
 .submitButton:hover {
@@ -131,11 +132,14 @@ input.submitButton {
 }
 
 #q-display {
+  border: dashed;
+  border-radius: 5px;
   width: 40%;
   margin: auto;
   margin-top: 10px;
   padding: 15px;
-  background-color: lightblue;
+  background-color: blue;
+  color: white;
   display: flex;
   flex-direction: column;
 }
