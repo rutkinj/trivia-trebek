@@ -5,6 +5,7 @@ let ans;
 let val;
 let currentUser = '';
 let currentScore = 0;
+let isAnswering = false;
 
 function getQuestion(category, value) {
   return questions.filter(
@@ -42,27 +43,31 @@ function populateBoard() {
 
 function onClick(event) {
   event.preventDefault();
-  let category = event.target.id.split('-')[0];
-  let value = event.target.innerText;
-  const displayBox = document.querySelector('#q-display>p');
-  const { question, answer } = getQuestion(category, value);
-  displayBox.innerText = question;
-  val = value;
-  ans = answer;
-  document.getElementById('ans-submit').disabled = false;
-  this.removeEventListener('click', onClick);
-  this.style.backgroundColor = 'gray';
-  this.style.pointerEvents = 'none';
-  this.style.transition = 'transform 0.8s';
-  this.style.transform = 'rotate(360deg)';
-  this.style.color = 'red';
-  this.style.perspective = '1000px';
+  if(!isAnswering){
+    isAnswering = true;
+    let category = event.target.id.split('-')[0];
+    let value = event.target.innerText;
+    const displayBox = document.querySelector('#q-display>p');
+    const { question, answer } = getQuestion(category, value);
+    displayBox.innerText = question;
+    val = value;
+    ans = answer;
+    document.getElementById('ans-submit').disabled = false;
+    this.removeEventListener('click', onClick);
+    this.style.backgroundColor = 'gray';
+    this.style.pointerEvents = 'none';
+    this.style.transition = 'transform 0.8s';
+    this.style.transform = 'rotate(360deg)';
+    this.style.color = 'red';
+    this.style.perspective = '1000px';
+  }
 }
 
 function checkAnswer(event) {
   event.preventDefault();
   let answer = new FormData(this).get('answer-input');
   document.getElementById('ans-submit').disabled = true;
+  isAnswering = false;
   answer === ans ? correctAns() : wrongAns();
 }
 
