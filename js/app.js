@@ -30,6 +30,7 @@ function populateBoard() {
       let el = document.createElement('div');
       el.id = `${topic.id}-${i * 100}`;
       el.innerText = `${i * 100}`;
+      el.className = 'board-box';
       el.addEventListener('click', onClick);
       topic.appendChild(el);
     }
@@ -45,6 +46,8 @@ function onClick(event) {
   displayBox.innerText = question;
   ans = answer;
   this.removeEventListener('click', onClick);
+  this.style.backgroundColor = 'gray';
+  this.style.pointerEvents = 'none';
 }
 
 function checkAnswer(event) {
