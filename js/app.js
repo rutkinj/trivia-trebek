@@ -1,5 +1,5 @@
 'use strict';
-
+const gameMusic = new Audio('audio/Jeopardy-theme-song.mp3');
 let questions;
 let ans;
 let val;
@@ -43,6 +43,7 @@ function populateBoard() {
 
 function onClick(event) {
   event.preventDefault();
+  gameMusic.play();
   if(!isAnswering){
     isAnswering = true;
     let category = event.target.id.split('-')[0];
