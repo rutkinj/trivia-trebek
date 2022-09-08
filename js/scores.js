@@ -24,6 +24,7 @@ function calculateScores() {
       return a.hiScore - b.hiScore;
     })
     .reverse();
+  document.getElementById('scores-list').innerHTML = '';
   document.getElementById('scores-list').insertAdjacentHTML('beforeend', `${players.map((player) => {
     return `<li>${player.userName}: ${player.hiScore}</li>`;
   }).join('')}`);
