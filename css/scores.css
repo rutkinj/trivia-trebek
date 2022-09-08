@@ -3,7 +3,7 @@
 body {
   max-width: 1200px;
   margin: auto;
-  background: url('/img/jeopardybackground.png');
+  background: url('../img/jeopardybackground.png');
 }
 
 header {
