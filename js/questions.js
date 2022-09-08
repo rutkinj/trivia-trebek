@@ -53,8 +53,8 @@ const QUESTIONS = {'200': [{
   'id': 17,
   'category': 'Git',
   'value': '400',
-  'question': 'What command is used to create to a new branch called name:  git checkout -b name, git newbranch name, git createnew -b name, git branch name ',
-  'answer': 'git checkout -b name'
+  'question': 'What command is used to create to a new branch called name:  1) git checkout -b name, 2) git newbranch name, 3) git createnew -b name, 4) git branch name ',
+  'answer': '1'
 }
 ], '600':
 [{
@@ -82,8 +82,8 @@ const QUESTIONS = {'200': [{
   'id': 18,
   'category': 'Git',
   'value': '600',
-  'question': 'The following command will add all changes to be staged for commit:  git add dontmissanything, git add all, git add everything, git add .',
-  'answer': 'git add .'
+  'question': 'The following command will add all changes to be staged for commit:  1) git add dontmissanything, 2) git add all, 3) git add everything, 4) git add .',
+  'answer': '4'
 }
 ], '800':
 [{
@@ -111,23 +111,23 @@ const QUESTIONS = {'200': [{
   'id': 19,
   'category': 'Git',
   'value': '800',
-  'question': 'What are the three steps to get changes from the local machine to github:  add push send, save commit push, add commit push, save comment send',
-  'answer': 'add commit push'
+  'question': 'What are the three steps to get changes from the local machine to github:  1) add push send, 2) save commit push, 3) add commit push, 4) save comment send',
+  'answer': '3'
 }
 ], '1000':
 [{
   'id': 5,
   'category': 'CSS',
   'value': '1000',
-  'question': 'What is the primary difference between grid and flexbox:  grid is 1 dimensional & flexbox is 2 dimensional, no difference, grid is 2 dimensional & flexbox is 1 dimensional',
-  'answer': 'grid is 2 dimensional & flexbox is 1 dimensional'
+  'question': 'What is the primary difference between grid and flexbox:  1) grid is 1 dimensional & flexbox is 2 dimensional, 2) no difference, 3) grid is 2 dimensional & flexbox is 1 dimensional',
+  'answer': '3'
 },
 {
   'id': 10,
   'category': 'HTML',
   'value': '1000',
-  'question': 'Which best describes the <canvas> element:  placeholder for a form, container for graphics, contains styling for a form',
-  'answer': 'container for graphics'
+  'question': 'Which best describes the <canvas> element:  1) placeholder for a form, 2) container for graphics, 3) contains styling for a form',
+  'answer': '2'
 },
 {
   'id': 15,
@@ -140,7 +140,7 @@ const QUESTIONS = {'200': [{
   'id': 20,
   'category': 'Git',
   'value': '1000',
-  'question': 'To download a Git repository named \'repo\' on your local machine for the first time which Git command would you use:  git push https:github.com/repo, git pull origin main, git clone https:github.com/repo',
-  'answer': 'git clone https:github.com/repo'
+  'question': 'To download a Git repository named \'repo\' on your local machine for the first time which Git command would you use:  1) git push https://github.com/repo, 2) git pull origin main, 3) git clone https://github.com/repo',
+  'answer': '3'
 }
 ]};
