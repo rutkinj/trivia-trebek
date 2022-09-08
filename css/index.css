@@ -17,6 +17,12 @@ header {
   justify-content: space-between;
 }
 
+.header-div div{
+  align-self: center;
+  font-size: x-large;
+  color: white;
+}
+
 nav {
   width: 40%;
   display: flex;
