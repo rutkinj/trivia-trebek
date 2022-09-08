@@ -66,6 +66,8 @@ function onClick(event) {
 
 function checkAnswer(event) {
   event.preventDefault();
+  gameMusic.pause();
+  gameMusic.currentTime = 0;
   let answer = new FormData(this).get('answer-input');
   document.getElementById('ans-submit').disabled = true;
   isAnswering = false;
