@@ -146,3 +146,15 @@ a {
 a:hover {
   color: #c5974d;
 }
+
+footer {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(189, 189, 189, 0.614);
+  height: 50px;
+  display: flex;
+}
+
+.copy {
+  padding-left: 30px;
+}
