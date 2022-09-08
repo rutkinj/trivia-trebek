@@ -138,13 +138,12 @@ function registerUser() {
 
 function alreadyRegistered(name) {
   const exists = JSON.parse(localStorage.getItem('users'));
-  const existingUser = exists.find((itm) => itm.userName === name);
-  if (existingUser) {
+  if (exists) {
+    const existingUser = exists.find((itm) => itm.userName === name);
     return existingUser;
   } else {
     const user = new User(name, 0);
-    exists.push(user);
-    localStorage.setItem('users', JSON.stringify(exists));
+    localStorage.setItem('users', JSON.stringify([user]));
     return user;
   }
 }
