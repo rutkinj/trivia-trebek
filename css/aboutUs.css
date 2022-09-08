@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:wght@100&display=swap');
+
 body {
   max-width: 1200px;
   margin: auto;
-  background-color: rgb(81, 175, 252);
+  background: url('/img/jeopardybackground.png');
 }
 
 header {
   margin: 10px;
   padding: 10px;
-  background-color: bisque;
+  background-color: rgba(217, 217, 217, 0.525);
 }
 
 .header-div {
@@ -22,26 +24,24 @@ nav {
   align-items: flex-end;
 }
 
-main {
-  height: 500px;
-  background-color: ;
-}
-
 div.headBox {
   border-radius: 10px;
-  background-color: rgb(218, 236, 252);
-  height: 150px;
-  width: 400px;
+  background-color: rgba(0, 0, 255, 0.819);
+  height: 80px;
+  width: 350px;
   font-size: 50px;
   text-align: center;
   display: flex;
   justify-content: space-between;
   margin: 0px 0px 0px 400px;
+  font-family: 'Anton', sans-serif;
+  text-shadow: 2px 0px black;
+  color: rgb(255, 255, 255);
 }
 
 section {
   border-radius: 10px;
-  background-color: rgb(218, 236, 252);
+  background-color: rgba(232, 232, 232, 0.863);
   height: 300px;
   width: 700px;
   font-size: 20px;
@@ -86,11 +86,7 @@ p.aboutDiego {
 }
 
 .copy {
-  padding: 0px 0px 0px 500px;
-}
-
-.numberAndName {
-  padding: 0px 0px 0px 400px;
+  padding-left:500px;
 }
 
 img {
@@ -118,14 +114,35 @@ img.benImg {
   margin: 38px 50px 0px 0px;
 }
 
+img.logo {
+  border: none;
+  border-radius: none;
+}
+
 #external-links {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  border: none;
 }
 
 #external-links img {
   padding-left: 10px;
   height: 50px;
   margin-left: 150%;
+  border: none;
+}
+
+nav,
+a {
+  text-shadow: 1px 0px black;
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  color: rgb(23, 20, 234);
+  transition: all 0.4s linear;
+}
+
+a:hover {
+  color: #c5974d;
 }
