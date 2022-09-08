@@ -1,13 +1,18 @@
 'use strict';
 
-function dummyUsers() {
-  document
-    .getElementById('scores-list')
-    .insertAdjacentHTML(
-      'beforeend',
-      '<li>Bill Russell: 5000</li><li>Dalai Lama: 3200</li><li>Pete Seeger: 1000</li>'
-    );
-}
+// function dummyUsers() {
+//   document
+//     .getElementById('scores-list')
+//     .insertAdjacentHTML(
+//       'beforeend',
+//       '<li>Bill Russell: 5000</li><li>Dalai Lama: 3200</li><li>Pete Seeger: 1000</li>'
+//     );
+// }
+
+const User = function(name, score) {
+  this.userName = name;
+  this.hiScore = score;
+};
 
 function calculateScores() {
   const scoreList = Array.from(document.getElementById('scores-list').children, (el) => {
@@ -24,5 +29,4 @@ function calculateScores() {
   }).join('')}`);
 }
 
-dummyUsers();
 calculateScores();
