@@ -80,15 +80,12 @@ function correctAns(){
   let disp = document.getElementById('score-display');
   currentScore += parseInt(val);
   disp.innerHTML = currentScore;
-  //check hiscore and update
   updateHiScore();
-  //let pick new q
 }
 
 function wrongAns(){
   const displayBox = document.querySelector('#q-display>p');
   displayBox.innerHTML = 'Nope, incorrect.';
-  //let pick new q
 }
 
 function updateHiScore(){
