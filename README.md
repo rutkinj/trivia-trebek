@@ -7,13 +7,14 @@
 - Question presentation!
 - Interactive answering areas!
 - Question catagories and value selector!
-- Countdown timer?
 - Score saving page!
 - About us page!
 
-## [Software Requirements](./mdFiles/softwarerequirements.mdsoftwarerequirements.md)
+## [Software Requirements](mdFiles/softwarerequirements.md)
 
-## [User Stories](./mdFiles/userStories.md)
+## [User Stories](mdFiles/userStories.md)
+
+## [Team Agreement](https://github.com/rutkinj/team-agree)
 
 ## Wireframe
 
